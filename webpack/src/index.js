@@ -17,11 +17,11 @@ let inp = document.getElementById('input');
 const debounced = debounce(onData, 500);
 inp.addEventListener('input', debounced);
 
-clearOutput();
 function onData() {
   const inpValue = inp.value;
-  if (inpValue === ' ') {
+  if (inpValue === "") {
     clearOutput();
+    return;
   }
 
   fetchCountries(baseUrl, inpValue, onDataReady);
