@@ -41,7 +41,7 @@ function onDataReady(data) {
 }
 
 function notificationOnManyMatches() {
-  PNotify.notice('Too many matches found!');
+  PNotify.error('Too many matches found! Please enter a more specific query!');
 }
 
 function showCountryList(countryList) {
